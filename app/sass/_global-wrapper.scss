@@ -1,0 +1,7 @@
+.global-wrapper {
+  overflow: hidden;
+
+  &.menu--opened {
+    position: fixed;
+  }
+}
