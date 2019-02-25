@@ -1,0 +1,70 @@
+.page-header {
+  margin-bottom: 30px;
+
+  @include atMobile{
+    margin-bottom: 15px;
+  };
+
+  &__top {
+    padding: 20px 0;
+    background: rgba(#000, .8);
+    margin-bottom: 20px;
+
+    @include atMobile{
+      margin-bottom: 10px;
+    };
+  }
+
+  &__top-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include atMobile{
+      justify-content: flex-start;
+    };
+  }
+
+  &__info {
+    @include atMobile{
+      margin-left: auto;
+    };
+  }
+
+  &__header {
+    font-size: 18px;
+    color: $wood;
+    color: #fff;
+    margin-bottom: 10px;
+
+    @include atMobile{
+      display: none;
+    };
+  }
+
+  &__phone {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &__button {
+    width: 170px;
+
+    @include atMobile{
+      display: none;
+    };
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include atMobile{
+      display: block;
+      width: auto;
+      font-size: 20px;
+      color: #fff;
+      transform: translateY(1px);
+    };
+  }
+}

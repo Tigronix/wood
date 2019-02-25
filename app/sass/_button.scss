@@ -1,0 +1,27 @@
+.button {
+  width: 100%;
+  height: 56px;
+  display: inline-block;
+  background: $wood;
+  text-align: center;
+  line-height: 56px;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 0px transparent;
+  transition: box-shadow .3s;
+
+  @include atDesktop{
+    &:hover {
+      box-shadow: inset 0 0 0 4px $wood2;
+    }
+  };
+
+  &--bg-black {
+    @include atDesktop{
+      &:hover {
+        box-shadow: inset 0 0 0 4px #fff;
+      }
+    };
+  }
+}

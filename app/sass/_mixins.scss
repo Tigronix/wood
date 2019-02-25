@@ -1,4 +1,6 @@
-@mixin fromVerticalTablet {
+// brakepoints
+
+@mixin atDesktop {
   @media (min-width:1025px) {
     @content
   }
@@ -9,3 +11,10 @@
     @content
   }
 };
+
+// pseudoclass
+
+@mixin pseudo {
+  display: block;
+  content: '';
+}
