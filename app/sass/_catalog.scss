@@ -1,0 +1,63 @@
+.catalog {
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px -10px;
+
+    @include atMobile{
+      display: block;
+      margin: -20px 0;
+    };
+  }
+
+  &__li {
+    width: calc(100% / 3);
+    padding: 20px 10px;
+
+    @include atMobile{
+      width: 100%;
+      padding: 20px 0;
+    };
+  }
+
+  &__link {
+    @include atMobile{
+      text-align: center;
+    };
+  }
+
+  &__img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include atMobile{
+      margin-bottom: 10px;
+    };
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #000;
+  }
+
+  &__price {
+    font-size: 16px;
+    color: #000;
+
+    span {
+      color: $wood;
+      font-weight: bold;
+    }
+  }
+}
