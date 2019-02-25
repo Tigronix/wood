@@ -1,0 +1,32 @@
+.about {
+  margin-bottom: 30px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include atMobile{
+      display: block;
+    };
+  }
+
+  &__text {
+    width: calc(100% - 300px);
+    padding-right: 40px;
+
+    @include atMobile{
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    };
+  }
+
+  &__img {
+    width: 300px;
+
+    @include atMobile{
+      width: 100%;
+    };
+  }
+}
