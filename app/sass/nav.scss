@@ -1,24 +1,54 @@
 .nav {
 
   @include atMobile{
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    padding: 50px 20px 20px 20px;
   };
-  
+
   &__ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include atMobile{
+      display: block;
+      margin-bottom: 20px;
+    };
   }
 
   &__li {
     font-size: 14px;
     text-transform: uppercase;
+
+    @include atMobile{
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    };
   }
 
   &__close {
     display: none;
-    position: absolute;
-    right: 15px;
-    top: 15px;
+
+    @include atMobile {
+      display: block;
+      font-size: 20px;
+      width: auto;
+      color: $wood;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 50;
+    };
   }
 }
