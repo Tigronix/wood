@@ -23,6 +23,16 @@
   }
 
   &__link {
+    @include atDesktop{
+      &:hover {
+        .catalog {
+          &__title {
+            color: $woodHover;
+          }
+        }
+      }
+    };
+
     @include atMobile{
       text-align: center;
     };
@@ -49,6 +59,8 @@
     margin-bottom: 10px;
     font-size: 18px;
     color: #000;
+
+    transition: color .3s;
   }
 
   &__price {
