@@ -1,0 +1,75 @@
+.aside {
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    font-size: 18px;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+
+    @include atMobile{
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+    };
+
+    &:after {
+      @include pseudo;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background: $wood;
+    }
+  }
+
+  &__list {
+    margin: -10px 0;
+
+    @include atMobile{
+      margin: -5px -10px;
+      display: flex;
+      flex-wrap: wrap;
+    };
+  }
+
+  &__li {
+    margin: 10px 0;
+
+    @include atMobile{
+      margin: 5px 10px;
+    };
+  }
+
+  &__link {
+    width: auto;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: $wood;
+      transition: .3s width;
+    }
+
+    @include atDesktop {
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
