@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	@include openSans;
+}
+
+
+.icon {
+	display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+button {
+	display: inline-block;
+	width: 100%;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+ul li {
+	list-style: none;
+}
