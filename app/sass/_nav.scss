@@ -1,7 +1,7 @@
 .nav {
   background: #EAEAEA;
 
-  @include atMobile{
+  @include atVertical{
     position: fixed;
     left: 0;
     top: 0;
@@ -20,7 +20,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include atMobile{
+    @include atVertical{
       display: block;
       margin-bottom: 20px;
     };
@@ -31,7 +31,7 @@
     font-weight: 600;
     flex: 1;
 
-    @include atMobile{
+    @include atVertical{
       margin-bottom: 10px;
 
       &:last-child {
@@ -57,7 +57,7 @@
       }
     }
 
-    @include atMobile{
+    @include atVertical{
       color: $blue;
     }
 
@@ -65,7 +65,7 @@
       background: $green;
       color: #fff;
 
-      @include atMobile{
+      @include atVertical{
         background: none;
         color: $blue;
       };
@@ -75,7 +75,7 @@
   &__close {
     display: none;
 
-    @include atMobile {
+    @include atVertical {
       display: block;
       font-size: 20px;
       width: auto;

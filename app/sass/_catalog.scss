@@ -8,11 +8,10 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px -10px;
+    justify-content: flex-start;
 
     @include atMobile{
-      display: block;
-      margin: -20px 0;
+      justify-content: center;
     };
   }
 
@@ -29,9 +28,12 @@
       }
     }
 
+    @include atVertical{
+      width: 240px;
+    }
+
     @include atMobile{
-      width: 100%;
-      padding: 20px 0;
+      width: 240px;
     };
   }
 
@@ -40,7 +42,7 @@
       &:hover {
         .catalog {
           &__title {
-            color: $green;
+            color: $blueDark;
           }
         }
       }

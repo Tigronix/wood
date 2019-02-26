@@ -1,14 +1,14 @@
 .page-header {
   margin-bottom: 50px;
 
-  @include atMobile{
+  @include atVertical{
     margin-bottom: 15px;
   };
 
   &__top {
     padding: 20px 0;
 
-    @include atMobile{
+    @include atVertical{
       margin-bottom: 10px;
     };
   }
@@ -18,13 +18,13 @@
     flex-wrap: wrap;
     align-items: center;
 
-    @include atMobile{
+    @include atVertical{
       justify-content: flex-start;
     };
   }
 
   &__info {
-    @include atMobile{
+    @include atVertical{
       margin-left: auto;
     };
   }
@@ -34,7 +34,7 @@
     color: #000;
     margin-bottom: 10px;
 
-    @include atMobile{
+    @include atVertical{
       display: none;
     };
   }
@@ -50,7 +50,13 @@
       margin-right: 10px;
     }
 
-    @include atMobile{
+    @include atDesktop{
+      &:hover {
+        color: $blueDark;
+      }
+    };
+
+    @include atVertical{
       font-size: 15px;
     };
   }
@@ -67,12 +73,18 @@
   &__hamburger {
     display: none;
 
-    @include atMobile{
+    @include atVertical{
       display: block;
       width: auto;
       font-size: 16px;
       color: #000;
       transform: translateY(1px);
+    };
+  }
+
+  &__logo {
+    @include atVertical{
+      margin-left: 10px;
     };
   }
 }
