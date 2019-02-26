@@ -62,8 +62,9 @@ h1 {
 	}
 }
 
-h2 {
+.h-page-main {
 	font-size: 26px;
+	color: #2a2a2a;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
@@ -78,6 +79,12 @@ h2 {
 		left: 0;
 		bottom: 00;
 	}
+}
+
+.h-page-static {
+	font-size: 21px;
+	color: #2a2a2a;
+	margin-bottom: 20px;
 }
 
 p {
