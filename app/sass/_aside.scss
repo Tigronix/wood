@@ -21,7 +21,7 @@
     padding: 10px 20px;
 
     @include atMobile{
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     };
   }
 
@@ -29,15 +29,14 @@
     margin: -10px 0;
 
     @include atMobile{
-      margin: -5px -10px;
-      display: flex;
-      flex-wrap: wrap;
+      margin: -10px 0;
     };
   }
 
   &__li {
     margin: 10px 0;
     padding-left: 12px;
+    display: block;
 
     &:last-child {
       .aside__link {
@@ -46,7 +45,7 @@
     }
 
     @include atMobile{
-      margin: 5px 10px;
+      margin: 10px 0;
     };
   }
 

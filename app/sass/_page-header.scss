@@ -16,7 +16,7 @@
   &__top-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
 
     @include atMobile{
       justify-content: flex-start;
@@ -42,10 +42,22 @@
   &__phone {
     color: $blue;
     font-size: 18px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    @include atMobile{
+      font-size: 15px;
+    };
   }
 
   &__button {
-    width: 170px;
+    width: auto;
+    margin-left: 30px;
 
     @include atMobile{
       display: none;
@@ -58,7 +70,7 @@
     @include atMobile{
       display: block;
       width: auto;
-      font-size: 20px;
+      font-size: 16px;
       color: #000;
       transform: translateY(1px);
     };

@@ -64,8 +64,10 @@
     &.active {
       background: $green;
       color: #fff;
+
       @include atMobile{
         background: none;
+        color: $blue;
       };
     }
   }
