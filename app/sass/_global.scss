@@ -46,8 +46,20 @@ a {
 h1 {
 	font-size: 30px;
 	color: #000;
-	margin-bottom: 24px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
 	text-transform: uppercase;
+	position: relative;
+
+	&:after {
+		@include pseudo;
+		width: 50px;
+		height: 3px;
+		background: $green;
+		position: absolute;
+		left: 0;
+		bottom: 00;
+	}
 }
 
 h2 {
@@ -80,4 +92,29 @@ p {
 
 img {
 	vertical-align: bottom;
+}
+
+.table-wrap {
+	overflow: auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+
+	@include atMobile{
+		min-width: 500px;
+	};
+}
+
+td {
+	text-align: center;
+	border: 1px solid $grey;
+	padding: 10px 5px;
+	font-size: 15px;
+
+	@include atVertical{
+		font-size: 13px;
+	};
 }

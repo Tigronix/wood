@@ -51,7 +51,7 @@ WD.mainMenuToggle = function(){
   $(window).resize(function() {
     const windowWidth = $(window).width();
 
-    if(windowWidth >= 769){
+    if(windowWidth >= 768){
       $('.js-menu').show();
       $globalWrapper.removeClass('global-wrapper--menu-opened');
     }else{
