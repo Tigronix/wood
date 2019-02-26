@@ -29,7 +29,6 @@
   &__li {
     font-size: 14px;
     font-weight: 600;
-    flex: 1;
 
     @include atMobile{
       margin-bottom: 10px;
@@ -50,8 +49,8 @@
     transition: background .3s;
     text-align: center;
 
-    @include atVertical{
-      padding: 0 5px;
+    @media screen and (max-width: 1100px){
+      padding: 0 10px;
       white-space: nowrap;
       font-size: 13px;
     };
