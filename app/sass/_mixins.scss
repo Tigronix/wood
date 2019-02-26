@@ -1,13 +1,13 @@
 // brakepoints
 
 @mixin atDesktop {
-  @media (min-width:1025px) {
+  @media (min-width:1301px) {
     @content
   }
 };
 
 @mixin atMobile {
-  @media (max-width:1024px) {
+  @media (max-width:1300px) {
     @content
   }
 };

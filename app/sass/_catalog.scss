@@ -13,7 +13,7 @@
   }
 
   &__li {
-    width: calc(100% / 3);
+    width: calc(100% / 4);
     padding: 20px 10px;
 
     @include atMobile{
@@ -27,7 +27,7 @@
       &:hover {
         .catalog {
           &__title {
-            color: $woodHover;
+            color: $green;
           }
         }
       }
@@ -45,6 +45,10 @@
     align-items: center;
     margin-bottom: 20px;
 
+    @include atDesktop{
+      height: 149px;
+    };
+
     img {
       max-width: 100%;
       height: auto;
@@ -58,7 +62,7 @@
   &__title {
     margin-bottom: 10px;
     font-size: 18px;
-    color: #000;
+    color: $blue;
 
     transition: color .3s;
   }
@@ -68,7 +72,7 @@
     color: #000;
 
     span {
-      color: $wood;
+      color: $green;
       font-weight: bold;
     }
   }

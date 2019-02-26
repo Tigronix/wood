@@ -11,16 +11,18 @@
   }
 
   &__aside {
-    width: 320px;
+    width: 280px;
+    padding-right: 40px;
 
     @include atMobile{
       width: 100%;
       margin-bottom: 45px;
+      padding-right: 0;
     };
   }
 
   &__content {
-    width: calc(100% - 320px);
+    width: calc(100% - 280px);
 
     @include atMobile{
       width: 100%;

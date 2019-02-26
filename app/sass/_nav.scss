@@ -1,4 +1,5 @@
 .nav {
+  background: $wood;
 
   @include atMobile{
     position: fixed;
@@ -18,7 +19,6 @@
   &__ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     @include atMobile{
       display: block;
@@ -29,6 +29,7 @@
   &__li {
     font-size: 14px;
     text-transform: uppercase;
+    flex: 1;
 
     @include atMobile{
       margin-bottom: 10px;
@@ -40,25 +41,32 @@
   }
 
   &__link {
-
-    &:after {
-      display: block;
-      content: '';
-      width: 0;
-      margin: 0 auto;
-      height: 2px;
-      background: $wood;
-      transition: width .3s;
-      margin-top: 5px;
-    }
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    display: block;
+    position: relative;
+    transition: background .3s;
+    text-align: center;
 
     @include atDesktop{
       &:hover {
-        &:after {
-          width: 100%;
-        }
+        background: $green
       }
-    };
+    }
+
+    @include atMobile{
+      color: $blue;
+    }
+
+    &.active {
+      background: $green;
+
+      @include atMobile{
+        background: none;
+      };
+    }
   }
 
   &__close {
@@ -68,7 +76,7 @@
       display: block;
       font-size: 20px;
       width: auto;
-      color: $wood;
+      color: $blue;
       position: absolute;
       right: 20px;
       top: 20px;

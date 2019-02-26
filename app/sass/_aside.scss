@@ -1,30 +1,25 @@
 .aside {
   &__item {
     margin-bottom: 30px;
+    border: 2px solid #d7d7d7;
+    padding: 10px;
   }
 
   &__header {
-    font-size: 18px;
-    color: #000;
+    font-size: 16px;
     text-transform: uppercase;
+    color: #fff;
     position: relative;
     margin-bottom: 25px;
-    padding-bottom: 10px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    background: $wood;
+    padding-left: 12px;
 
     @include atMobile{
       margin-bottom: 15px;
-      padding-bottom: 10px;
     };
-
-    &:after {
-      @include pseudo;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 50px;
-      height: 3px;
-      background: $wood;
-    }
   }
 
   &__list {
@@ -39,6 +34,13 @@
 
   &__li {
     margin: 10px 0;
+    padding-left: 12px;
+
+    &:last-child {
+      .aside__link {
+        border-bottom: none;
+      }
+    }
 
     @include atMobile{
       margin: 5px 10px;
@@ -49,27 +51,21 @@
     width: auto;
     position: relative;
     padding-bottom: 5px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 
-    &:after {
-      display: block;
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: $wood;
-      transition: .3s width;
-    }
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d7d7d7;
 
-    @include atDesktop {
+    @include atDesktop{
       &:hover {
-        &:after {
-          width: 100%;
-        }
+        color: $green;
       }
+    };
+
+    @include atMobile{
+      padding-bottom: 0;
+      border-bottom: 0;
     }
   }
 }
