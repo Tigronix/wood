@@ -125,7 +125,7 @@ WD.accordion = function(){
       $('.js-accordion-mobile-header').off();
     };
 
-    if(windowWidth >= 768){
+    if(windowWidth <= 767){
       accordionMobile();
     }
   });

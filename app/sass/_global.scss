@@ -96,12 +96,12 @@ img {
 
 .table-wrap {
 	overflow: auto;
+	margin-bottom: 30px;
 }
 
 table {
 	width: 100%;
 	border-collapse: collapse;
-	margin-bottom: 30px;
 
 	@include atMobile{
 		min-width: 500px;
