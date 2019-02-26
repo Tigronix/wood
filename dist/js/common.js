@@ -75,25 +75,35 @@ WD.accordion = function(){
     const $accordionMobileContents = $accordionMobile.find('.js-accordion-mobile-content');
     const $accordionMobileItems = $accordionMobile.find('.js-accordion-mobile-item');
 
-    if(WD.atMobile.matches){
-      $accordionMobileButtons.on('click', function(){
-        const $parentItem = $(this).closest('.js-accordion-mobile-item');
-        const $parentContent = $parentItem.find('.js-accordion-mobile-content');
-        const isActive = $parentItem.hasClass('active');
+    $accordionMobileButtons.off('click').on('click', function(){
+      const $parentItem = $(this).closest('.js-accordion-mobile-item');
+      const $parentContent = $parentItem.find('.js-accordion-mobile-content');
+      const isActive = $parentItem.hasClass('active');
+      $parentItem.addClass('active').siblings().removeClass('active').find('.js-accordion-mobile-content').slideUp('400');
 
-        $parentItem.addClass('active').siblings().removeClass('active').find('.js-accordion-mobile-content').slideUp('400');
+      $parentContent.slideDown('400');
 
-        $parentContent.slideDown('400');
-
-        if(isActive){
-          $parentItem.removeClass('active');
-          $parentContent.slideUp('400');
-        }
-      });
-    }
+      if(isActive){
+        $parentItem.removeClass('active');
+        $parentContent.slideUp('400');
+      }
+    });
   };
 
+  $(window).resize(function() {
+    const windowWidth = $(window).width();
+
+    if(windowWidth <= 767){
+      $('.js-accordion-mobile-content').hide();
+      accordionMobile();
+    }else{
+      $('.js-accordion-mobile-content').show();
+      $('.js-accordion-mobile-item').removeClass('active');
+    }
+  });
+
   accordionMobile();
+
 };
 
 WD.ymaps = function(){
