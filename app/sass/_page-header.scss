@@ -1,5 +1,5 @@
 .page-header {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   @include atMobile{
     margin-bottom: 15px;
@@ -7,7 +7,6 @@
 
   &__top {
     padding: 20px 0;
-    margin-bottom: 20px;
 
     @include atMobile{
       margin-bottom: 10px;

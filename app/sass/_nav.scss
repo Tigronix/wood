@@ -1,5 +1,5 @@
 .nav {
-  background: $wood;
+  background: #EAEAEA;
 
   @include atMobile{
     position: fixed;
@@ -28,7 +28,7 @@
 
   &__li {
     font-size: 14px;
-    text-transform: uppercase;
+    font-weight: 600;
     flex: 1;
 
     @include atMobile{
@@ -41,7 +41,7 @@
   }
 
   &__link {
-    color: #fff;
+    color: #2a2a2a;
     height: 50px;
     line-height: 50px;
     padding: 0 20px;
@@ -52,6 +52,7 @@
 
     @include atDesktop{
       &:hover {
+        color: #fff;
         background: $green
       }
     }
@@ -62,7 +63,7 @@
 
     &.active {
       background: $green;
-
+      color: #fff;
       @include atMobile{
         background: none;
       };

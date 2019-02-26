@@ -15,6 +15,13 @@
   &__li {
     width: calc(100% / 4);
     padding: 20px 10px;
+    border: 2px solid transparent;
+    transition: border .3s;
+    text-align: center;
+
+    &:hover {
+        border-color: #eaeaea;
+    }
 
     @include atMobile{
       width: 100%;
@@ -60,7 +67,6 @@
   }
 
   &__title {
-    margin-bottom: 10px;
     font-size: 18px;
     color: $blue;
 
@@ -72,8 +78,7 @@
     color: #000;
 
     span {
-      color: $green;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
 }
