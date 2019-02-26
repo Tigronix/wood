@@ -47,6 +47,17 @@ WD.mainMenuToggle = function(){
           popupClose();
       }
   });
+
+  $(window).resize(function() {
+    const windowWidth = $(window).width();
+
+    if(windowWidth >= 768){
+      $('.js-menu').show();
+      $globalWrapper.removeClass('global-wrapper--menu-opened');
+    }else{
+      $('.js-menu').hide();
+    }
+  });
 };
 
 WD.accordion = function(){
@@ -92,17 +103,32 @@ WD.accordion = function(){
 
   $(window).resize(function() {
     const windowWidth = $(window).width();
+    const destroyAccordion = function(){
+      $('.js-accordion-mobile-content').show();
+      $('.js-accordion-mobile-item').removeClass('active');
+      $('.js-accordion-mobile-header').off();
+    };
 
     if(windowWidth <= 767){
       $('.js-accordion-mobile-content').hide();
       accordionMobile();
     }else{
-      $('.js-accordion-mobile-content').show();
-      $('.js-accordion-mobile-item').removeClass('active');
+      destroyAccordion();
     }
   });
 
-  accordionMobile();
+  $(window).load(function() {
+    const windowWidth = $(window).width();
+    const destroyAccordion = function(){
+      $('.js-accordion-mobile-content').show();
+      $('.js-accordion-mobile-item').removeClass('active');
+      $('.js-accordion-mobile-header').off();
+    };
+
+    if(windowWidth >= 768){
+      accordionMobile();
+    }
+  });
 
 };
 
@@ -139,8 +165,6 @@ WD.ymaps = function(){
 
 		    myMap.geoObjects
 		        .add(myPlacemarkWithContent);
-
-
 		});
 	});
 };
