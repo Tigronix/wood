@@ -51,11 +51,11 @@ WD.mainMenuToggle = function(){
   $(window).resize(function() {
     const windowWidth = $(window).width();
 
-    if(windowWidth >= 1301){
+    if(windowWidth >= 769){
       $('.js-menu').show();
+      $globalWrapper.removeClass('global-wrapper--menu-opened');
     }else{
       $('.js-menu').hide();
-      $globalWrapper.removeClass('global-wrapper--menu-opened');
     }
   });
 };

@@ -73,7 +73,7 @@
   &__hamburger {
     display: none;
 
-    @include atVertical{
+    @include atMobile{
       display: block;
       width: auto;
       font-size: 16px;
@@ -83,7 +83,7 @@
   }
 
   &__logo {
-    @include atVertical{
+    @include atMobile{
       margin-left: 10px;
     };
   }

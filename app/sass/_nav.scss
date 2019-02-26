@@ -1,7 +1,7 @@
 .nav {
   background: #EAEAEA;
 
-  @include atVertical{
+  @include atMobile{
     position: fixed;
     left: 0;
     top: 0;
@@ -20,7 +20,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include atVertical{
+    @include atMobile{
       display: block;
       margin-bottom: 20px;
     };
@@ -31,7 +31,7 @@
     font-weight: 600;
     flex: 1;
 
-    @include atVertical{
+    @include atMobile{
       margin-bottom: 10px;
 
       &:last-child {
@@ -50,6 +50,16 @@
     transition: background .3s;
     text-align: center;
 
+    @include atVertical{
+      padding: 0 5px;
+      white-space: nowrap;
+      font-size: 13px;
+    };
+
+    @include atMobile{
+      font-size: 15px;
+    };
+
     @include atDesktop{
       &:hover {
         color: #fff;
@@ -57,7 +67,7 @@
       }
     }
 
-    @include atVertical{
+    @include atMobile{
       color: $blue;
     }
 
@@ -65,7 +75,7 @@
       background: $green;
       color: #fff;
 
-      @include atVertical{
+      @include atMobile{
         background: none;
         color: $blue;
       };
@@ -75,7 +85,7 @@
   &__close {
     display: none;
 
-    @include atVertical {
+    @include atMobile {
       display: block;
       font-size: 20px;
       width: auto;
