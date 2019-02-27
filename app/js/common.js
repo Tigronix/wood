@@ -1,4 +1,3 @@
-"use strict"
 
 // global object for whole project. DONT change it!
 const WD = {};
@@ -165,7 +164,7 @@ WD.ymaps = function(){
 
 		    myMap.geoObjects
 		        .add(myPlacemarkWithContent);
-         myMap.behaviors.disable('scrollZoom'); 
+         myMap.behaviors.disable('scrollZoom');
 		});
 	});
 };

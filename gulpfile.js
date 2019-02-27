@@ -11,7 +11,7 @@ var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync');
 
-gulp.task('sass', function() { // Создаем таск "sass"
+gulp.task('sass', function() {
   return gulp.src(['app/sass/**/*.sass', 'app/sass/**/*.scss']) // Берем источник
     .pipe(sass({
       outputStyle: 'extended'
@@ -54,7 +54,8 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('dist');
+   del.sync('dist');
+   // del.sync('../../OSPanel/domains/test.tt/template');
 });
 
 gulp.task('clear', function() {
@@ -71,7 +72,8 @@ gulp.task('img', function() {
       }],
       une: [pngquant()]
     })))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('dist/img'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/img'));
 });
 
 gulp.task('fonts', function() { // Создаем таск "sass"
@@ -92,18 +94,23 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts', 'fonts'], function() {
       'app/css/main.css',
       'app/css/libs.min.css',
     ])
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/css'));
 
   var buildFonts = gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/fonts'));
 
   var buildJs = gulp.src('app/js/**/*')
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/js'));
 
   var buildTemplates = gulp.src('app/templates/*.html')
-    .pipe(gulp.dest('dist/templates'));
+    .pipe(gulp.dest('dist/templates'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/templates'));
 
   var buildHtml = gulp.src('app/*.html')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('../../OSPanel/domains/test.tt/template/'));
 
 });
