@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title></title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="global-svg"></div>
+	<div class="global-wrapper">
+		<header class="page-header">
+				<div class="page-header__top">
+					<div class="wrapper page-header__top-wrapper">
+						<button class="page-header__hamburger js-menu-open" type="button"><svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg></button>
+						<div class="page-header__left">
+							<a href="index.html" class="page-header__logo logo">ПилМат</a>
+							<div class="page-header__header">Пиломатериалы с доставкой по области</div>
+						</div>
+						<a href="tel:+74951111111" class="page-header__phone"><svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg> +7495 111-11-11</a>
+						<button type="button" class="button page-header__button">Заказать доставку</button>
+					</div>
+				</div>
+			<div class="page-header__menu">
+				<div class="wrapper">
+					<nav class="nav js-menu">
+						<button class="nav__close js-menu-close" type="button"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
+						<ul class="nav__ul">
+							<li class="nav__li"><a href="#" class="nav__link active">Пиломатериалы</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Акция</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Доставка</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Цены</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Заказать</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Отзывы</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">О компании</a></li>
+							<li class="nav__li"><a href="#" class="nav__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page-main">
+			<div class="wrapper">
+				<h1>Наши Контакты</h1>
+				<ul class="breadcrumbs">
+					<li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">Пиломатериалы</a></li>
+					<li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">Контакты</a></li>
+				</ul>
+			</div>
+			<section class="contacts contacts--white">
+				<div class="contacts__wrapper wrapper">
+					<div class="contacts__map"><div class="js-map" id="map1" data-lat="60.122282" data-lon="30.499349"
+										 data-addr="п.Кузьмолово ул Победы 10"></div></div>
+					<div class="contacts__content">
+						<div class="contacts__item">
+							<div class="contacts__title">Телефон:</div>
+							<a href="tel:+7495222222">+7(495) 22-22-22</a>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__title">Мобильный телефон:</div>
+							<a href="tel:+74951111111">+7(495) 111-11-11</a>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__title">E-mail:</div>
+							<a href="mailto:example@ya.ru">example@ya.ru</a>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__title">Адрес:</div>
+							<p>Чернобыль, ул. Кирова, д.36</p>
+						</div>
+						<div class="contacts__item">
+							<div class="contacts__title">Расписание:</div>
+							<p> Работаем с 8:00 до 20:00 БЕЗ ВЫХОДНЫХ!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="js/common.js"></script>
+</body>
+
+</html>

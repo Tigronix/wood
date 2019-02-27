@@ -2,6 +2,12 @@
   background: $grey;
   padding: 40px 0;
 
+  &--white {
+    background: #fff;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
