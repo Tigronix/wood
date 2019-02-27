@@ -18,6 +18,12 @@
   }
 };
 
+@mixin less1100 {
+  @media (max-width:1100px) {
+    @content
+  }
+}
+
 // pseudoclass
 
 @mixin pseudo {

@@ -165,6 +165,7 @@ WD.ymaps = function(){
 
 		    myMap.geoObjects
 		        .add(myPlacemarkWithContent);
+         myMap.behaviors.disable('scrollZoom'); 
 		});
 	});
 };
